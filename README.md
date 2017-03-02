@@ -11,6 +11,8 @@ From the command line, run the following commands to install the required depend
 1. npm install
 2. bower install
 
+опционально: nmp i gulp
+
 Then run "gulp serve" on the root of the directory to launch the project in your browser.
 
 
