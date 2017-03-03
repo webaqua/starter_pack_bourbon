@@ -1,13 +1,22 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var plumber = require('gulp-plumber');
-var concat = require('gulp-concat');
-var jshint = require('gulp-jshint');
-var stylish = require('jshint-stylish');
-var uglify = require('gulp-uglify');
-var browserSync = require('browser-sync').create();
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    autoprefixer = require('gulp-autoprefixer'),
+		minifycss    = require('gulp-minify-css'),
+		rename       = require('gulp-rename'),
+    plumber = require('gulp-plumber'),
+    concat = require('gulp-concat'),
+    jshint = require('gulp-jshint'),
+    stylish = require('jshint-stylish'),
+    uglify = require('gulp-uglify'),
+    pug = require('gulp-pug'),
+    browserSync = require('browser-sync').create();
+
+gulp.task('pug', function() {
+    return gulp.src('./src/*.pug')
+    .pipe(pug({pretty: true}))
+    .pipe(gulp.dest('./src/app'));
+});
 
 gulp.task('sass', function () {
   return gulp.src('./src/sass/*.scss')
@@ -20,7 +29,9 @@ gulp.task('sass', function () {
     }))
     .pipe(concat('main.css'))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./src/css'));
+  	.pipe(rename({suffix: '.min', prefix : ''}))
+    .pipe(minifycss())
+    .pipe(gulp.dest('./src/app/css'));
 });
 
 gulp.task('scripts', function () {
@@ -41,31 +52,26 @@ gulp.task('compress', function() {
   return gulp.src('./src/js/custom/*.js')
     .pipe(uglify())
     .pipe(concat('production.min.js'))
-    .pipe(gulp.dest('./src/js/dist/compressed'));
+    .pipe(gulp.dest('./src/app/js'));
 });
 
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "./src"
+            baseDir: "./src/app"
         }
     });
 });
 
 
 gulp.task('watch', function() {
-  // Watch .html files
-  gulp.watch('./src/**/*.html').on('change', browserSync.reload);
-  // Watch .sass files
+  gulp.watch('./src/app/*.html').on('change', browserSync.reload);
   gulp.watch('./src/sass/**/*.scss', ['sass', browserSync.reload]);
-  // Watch .js files
+  gulp.watch('./src/sass/**/*.sass', ['sass', browserSync.reload]);
+  gulp.watch('./src/*.pug', ['pug', browserSync.reload]);
   gulp.watch('./src/js/**/*.js', ['scripts', browserSync.reload]);
-  // Watch image files
-  // gulp.watch('./src/imgs/**/*', ['images', browserSync.reload]);
 });
 
-gulp.task('serve', function() {
-    gulp.start('sass', 'scripts', 'jshint', 'compress', 'browser-sync', 'watch');
+gulp.task('default', function() {
+    gulp.start('pug', 'sass', 'scripts', 'jshint', 'compress', 'browser-sync', 'watch');
 });
-
-gulp.task('default', ['browser-sync', 'watch']);

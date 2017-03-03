@@ -18,6 +18,7 @@
     "bourbon": "*",
     "neat": "*",
     "bitters": "*",
+    "jquery" : "*",
     "normalize-scss": "~3.0.3"
   }
 }
