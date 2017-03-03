@@ -19,7 +19,7 @@ gulp.task('pug', function() {
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./src/sass/*.scss')
+  return gulp.src('./src/sass/*.{scss,sass}')
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
