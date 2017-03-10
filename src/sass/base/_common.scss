@@ -2,6 +2,11 @@ h1 { // Sample override
 	font-size: 2.5em;
 }
 
+// screens
+$medium_screen: 40em !default;
+$large_screen: 53.75em !default;
+
+// colors
 $primary: #000 !default;
 $secondary: #fff;
 
@@ -9,7 +14,7 @@ $secondary: #fff;
 $menu_centered_background: $primary;
 $menu_centered_base_font_color: $secondary;
 $menu_centered_base_border_radius: 6px;
-$menu_centered_large_screen: 53.75em;
+$menu_centered_large_screen: $large_screen;
 $menu_centered_centered_navigation_padding: 1em;
 $menu_centered_centered_navigation_logo_height: 2em;
 $menu_centered_centered_navigation_height: 60px;
@@ -22,3 +27,12 @@ $menu_centered_centered_navigation_color_hover: $menu_centered_base_font_color;
 $menu_centered_centered_navigation_color: transparentize($menu_centered_base_font_color, 0.3);
 $menu_centered_centered_navigation_background: $menu_centered_background;
 $menu_centered_base_font_color: $menu_centered_base_font_color;
+
+// footer_menu
+$footer_menu_base_spacing: 1.5em !default;
+$footer_menu_medium_screen: $medium_screen;
+$footer_menu_large_screen: $large_screen;
+$footer_menu_footer_background: $primary;
+$footer_menu_footer_color: $secondary;
+$footer_menu_footer_link_color: transparentize($footer_menu_footer_color, 0.6);
+$footer_menu_footer_disclaimer_color: transparentize($footer_menu_footer_color, 0.6);
