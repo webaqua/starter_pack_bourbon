@@ -1,0 +1,86 @@
+.accordion-tabs {
+
+  @include clearfix;
+  line-height: 1.5;
+  margin-bottom: $accordion_tabs_base_spacing;
+  padding: 0;
+
+  @include media(max-width $accordion_tabs_tab_mode) {
+    border: $accordion_tabs_tab_border;
+    border-radius: $accordion_tabs_base_border_radius;
+  }
+
+  .tab-header-and-content {
+    list-style: none;
+
+    @include media($accordion_tabs_tab_mode) {
+      display: inline;
+    }
+
+    &:first-child .tab-link {
+      border-top-left-radius: $accordion_tabs_base_border_radius;
+      border-top-right-radius: $accordion_tabs_base_border_radius;
+
+      @include media(max-width $accordion_tabs_tab_mode) {
+        border-top: 0;
+      }
+    }
+
+    &:last-child .tab-link {
+      @include media(max-width $accordion_tabs_tab_mode) {
+        border-bottom-left-radius: $accordion_tabs_base_border_radius;
+        border-bottom-right-radius: $accordion_tabs_base_border_radius;
+      }
+    }
+  }
+
+  .tab-link {
+    background-color: $accordion_tabs_tab_inactive_color;
+    border-top: $accordion_tabs_tab_border;
+    color: $dark-gray;
+    display: block;
+    font-weight: bold;
+    padding: ($accordion_tabs_base_spacing / 2) ($gutter / 2);
+    text-decoration: none;
+
+    @include media($accordion_tabs_tab_mode) {
+      @include border-top-radius($accordion_tabs_base_border_radius);
+      border-top: 0;
+      display: inline-block;
+    }
+
+    &:hover {
+      color: $accordion_tabs_action_color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.is-active {
+      background-color: $accordion_tabs_tab_active_background;
+
+      @include media($accordion_tabs_tab_mode) {
+        background-color: $accordion_tabs_tab_active_background;
+        border: $accordion_tabs_tab_border;
+        border-bottom-color: $accordion_tabs_tab_active_background;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  .tab-content {
+    background: $accordion_tabs_tab_content_background;
+    display: none;
+    padding: $accordion_tabs_base_spacing $gutter;
+    width: 100%;
+
+    @include media($accordion_tabs_tab_mode) {
+      border: $accordion_tabs_tab_border;
+      border-bottom-left-radius: $accordion_tabs_base_border_radius;
+      border-bottom-right-radius: $accordion_tabs_base_border_radius;
+      border-top-right-radius: $accordion_tabs_base_border_radius;
+      float: left;
+    }
+  }
+}

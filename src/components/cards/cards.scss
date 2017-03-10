@@ -1,0 +1,70 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+
+  background-color: $cards_card_background;
+  border: $cards_card_border;
+  border-radius: $cards_base-border-radius;
+  box-shadow: 0 2px 4px darken($cards_base_background_color, 10%);
+  cursor: pointer;
+  flex-basis: 15em;
+  flex-grow: 1;
+  margin: 0 $cards_card_margin $cards_base_spacing $cards_card_margin;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+
+  .card-image {
+    background-color: $cards_card_image_hover_color;
+    height: 150px;
+    max-height: 150px;
+    overflow: hidden;
+
+    img {
+      @include border-top-radius($cards_base-border-radius);
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+    }
+  }
+
+  .card-header {
+    background-color: $cards_card_header_background;
+    border-bottom: $cards_card_border;
+    border-radius: $cards_base-border-radius $cards_base-border-radius 0 0;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: ($cards_base_spacing / 3) ($cards_base_spacing / 2);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .card-copy {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: ($cards_base_spacing / 2) ($cards_base_spacing / 2);
+
+    p {
+      margin: 0 0 ($cards_base_spacing / 2);
+    }
+  }
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+
+    img {
+      opacity: $cards_card_image_hover_opacity;
+    }
+  }
+
+  &:active {
+    background-color: $cards_card_background;
+
+    .card-header {
+      background-color: $cards_card_background;
+    }
+  }
+}
