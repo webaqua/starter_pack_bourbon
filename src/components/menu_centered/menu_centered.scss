@@ -1,0 +1,260 @@
+.centered-navigation {
+
+  background-color: $menu_centered_centered_navigation_background;
+  border-bottom: 1px solid darken($menu_centered_centered_navigation_background, 6%);
+  min-height: $menu_centered_centered_navigation_height;
+  width: 100%;
+  z-index: 9999;
+
+
+// Mobile view
+
+  .mobile-logo {
+    display: inline;
+    float: left;
+    max-height: $menu_centered_centered_navigation_height;
+    padding-left: $menu_centered_centered_navigation_padding;
+
+    img {
+      max-height: $menu_centered_centered_navigation_height;
+      opacity: 0.6;
+      padding: 0.8em 0;
+    }
+
+    @include media($menu_centered_horizontal_bar_mode) {
+      display: none;
+    }
+  }
+
+  .centered-navigation-mobile-menu {
+    color: $menu_centered_centered_navigation_color;
+    display: block;
+    float: right;
+    line-height: $menu_centered_centered_navigation_height;
+    margin: 0;
+    padding-right: $menu_centered_centered_navigation_submenu_padding;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include media ($menu_centered_horizontal_bar_mode) {
+      display: none;
+    }
+
+    &:focus,
+    &:hover {
+      color: $menu_centered_centered_navigation_color_hover;
+    }
+  }
+
+
+// Nav menu
+
+  .centered-navigation-wrapper {
+    @include outer-container;
+    @include clearfix;
+    position: relative;
+    z-index: 999;
+  }
+
+  ul.centered-navigation-menu {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    -webkit-transform-style: preserve-3d;
+// stop webkit flicker
+    width: 100%;
+    z-index: 99999;
+
+    &.show {
+      display: block;
+    }
+
+    @include media ($menu_centered_horizontal_bar_mode) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+
+// The nav items
+
+  .nav-link:first-child {
+    @include media($menu_centered_horizontal_bar_mode) {
+      margin-left: $menu_centered_centered_navigation_item_nudge;
+    }
+  }
+
+  ul li.nav-link {
+    background: $menu_centered_centered_navigation_background;
+    display: block;
+    line-height: $menu_centered_centered_navigation_height;
+    overflow: hidden;
+    padding-right: $menu_centered_centered_navigation_submenu_padding;
+    text-align: right;
+    width: 100%;
+    z-index: 9999;
+
+    a {
+      color: $menu_centered_centered_navigation_color;
+      display: inline-block;
+      outline: none;
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        color: $menu_centered_centered_navigation_color_hover;
+      }
+    }
+
+    @include media($menu_centered_horizontal_bar_mode) {
+      background: transparent;
+      display: inline;
+      line-height: $menu_centered_centered_navigation_height;
+
+      a {
+        padding-right: $menu_centered_centered_navigation_item_padding;
+      }
+    }
+  }
+
+  li.logo.nav-link {
+    display: none;
+    line-height: 0;
+
+    @include media($menu_centered_horizontal_bar_mode) {
+      display: inline;
+    }
+  }
+
+  .logo img {
+    margin-bottom: -$menu_centered_centered_navigation_logo_height / 3;
+    max-height: $menu_centered_centered_navigation_logo_height;
+    opacity: 0.6;
+  }
+
+
+// Sub menus
+
+  li.more.nav-link {
+    padding-right: 0;
+
+    @include media($menu_centered_large_screen) {
+      padding-right: $menu_centered_centered_navigation_submenu_padding;
+    }
+
+    > ul > li:first-child a  {
+      padding-top: 1em;
+    }
+
+    a {
+      margin-right: $menu_centered_centered_navigation_submenu_padding;
+    }
+
+    > a {
+      padding-right: 0.6em;
+    }
+
+    > a::after {
+      @include position(absolute, auto -0.4em auto auto);
+      color: $menu_centered_centered_navigation_color;
+      content: "\25BE";
+    }
+  }
+
+  li.more {
+    overflow: visible;
+    padding-right: 0;
+
+    a {
+      padding-right: $menu_centered_centered_navigation_submenu_padding;
+    }
+
+    > a {
+      padding-right: 1.6em;
+      position: relative;
+
+      @include media($menu_centered_large_screen) {
+        margin-right: $menu_centered_centered_navigation_submenu_padding;
+      }
+
+      &::after {
+        content: "›";
+        font-size: 1.2em;
+        position: absolute;
+        right: $menu_centered_centered_navigation_submenu_padding / 2;
+      }
+    }
+
+    &:focus > .submenu,
+    &:hover > .submenu {
+      display: block;
+    }
+
+    @include media($menu_centered_horizontal_bar_mode) {
+      padding-right: $menu_centered_centered_navigation_submenu_padding;
+      position: relative;
+    }
+  }
+
+  ul.submenu {
+    display: none;
+    padding-left: 0;
+
+    @include media($menu_centered_horizontal_bar_mode) {
+      left: -$menu_centered_centered_navigation_submenu_padding;
+      position: absolute;
+      top: 1.5em;
+    }
+
+    .submenu.fly-out-right {
+      @include media($menu_centered_horizontal_bar_mode) {
+        left: $menu_centered_centered_navigation_submenu_width - 0.2em;
+        top: 0;
+      }
+    }
+
+    .submenu.fly-out-left {
+      @include media($menu_centered_horizontal_bar_mode) {
+        left: -$menu_centered_centered_navigation_submenu_width + 0.2em;
+        top: 0;
+      }
+    }
+
+    li {
+      display: block;
+      padding-right: 0;
+
+      @include media($menu_centered_horizontal_bar_mode) {
+        line-height: $menu_centered_centered_navigation_height / 1.3;
+
+        &:first-child > a {
+          border-top-left-radius: $menu_centered_base_border_radius;
+          border-top-right-radius: $menu_centered_base_border_radius;
+        }
+
+        &:last-child > a {
+          border-bottom-left-radius: $menu_centered_base_border_radius;
+          border-bottom-right-radius: $menu_centered_base_border_radius;
+          padding-bottom: 0.7em;
+        }
+      }
+
+      a {
+        background-color: darken($menu_centered_centered_navigation_background, 3%);
+        display: inline-block;
+        text-align: right;
+        text-decoration: none;
+        width: 100%;
+
+        @include media($menu_centered_horizontal_bar_mode) {
+          background-color: $menu_centered_centered_navigation_background;
+          padding-left: $menu_centered_centered_navigation_submenu_padding;
+          text-align: left;
+          width: $menu_centered_centered_navigation_submenu_width;
+        }
+      }
+    }
+  }
+}

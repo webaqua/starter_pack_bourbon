@@ -1,3 +1,24 @@
 h1 { // Sample override
 	font-size: 2.5em;
 }
+
+$primary: #000 !default;
+$secondary: #fff;
+
+// menu_centered
+$menu_centered_background: $primary;
+$menu_centered_base_font_color: $secondary;
+$menu_centered_base_border_radius: 6px;
+$menu_centered_large_screen: 53.75em;
+$menu_centered_centered_navigation_padding: 1em;
+$menu_centered_centered_navigation_logo_height: 2em;
+$menu_centered_centered_navigation_height: 60px;
+$menu_centered_centered_navigation_item_padding: 1em;
+$menu_centered_centered_navigation_submenu_padding: 1em;
+$menu_centered_centered_navigation_submenu_width: 12em;
+$menu_centered_centered_navigation_item_nudge: 2.2em;
+$menu_centered_horizontal_bar_mode: $menu_centered_large_screen;
+$menu_centered_centered_navigation_color_hover: $menu_centered_base_font_color;
+$menu_centered_centered_navigation_color: transparentize($menu_centered_base_font_color, 0.3);
+$menu_centered_centered_navigation_background: $menu_centered_background;
+$menu_centered_base_font_color: $menu_centered_base_font_color;
