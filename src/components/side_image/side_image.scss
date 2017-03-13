@@ -1,0 +1,59 @@
+.side-image {
+  background: $side_image_side_image_content_background;
+
+  @include media($large-screen) {
+    @include row(table);
+  }
+
+  .images-wrapper {
+    background: url("https:
+//raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"),
+                linear-gradient($side_image_side_image_background_top, $side_image_side_image_background_bottom),
+                no-repeat $side_image_side_image_background_top scroll;
+    background-color: $side_image_side_image_background_top;
+    background-size: cover;
+    border-bottom: $side_image_side_image_border;
+    display: block;
+    min-height: 12em;
+    padding: 3em;
+
+    @include media($large-screen) {
+      @include span-columns(4);
+      background-position: bottom;
+      background-size: cover;
+      border-right: $side_image_side_image_border;
+    }
+  }
+
+  .side-image-content {
+    @include span-columns(12);
+    padding: 1em 1em 4em 1em;
+
+    @include media($large-screen) {
+      @include span-columns(8);
+      padding: 4em 4em 8em 4em;
+    }
+
+    h1 {
+      margin-bottom: 0.9em;
+    }
+
+    h4 {
+      background: #BBB;
+      color: white;
+      display: inline-block;
+      font-size: 0.75em;
+      margin-bottom: 1.3em;
+      padding: 3px 8px;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: $side_image_base_font_color;
+      line-height: $side_image_base_line_height;
+      margin-bottom: 3em;
+    }
+  }
+
+  @include reset-display();
+}

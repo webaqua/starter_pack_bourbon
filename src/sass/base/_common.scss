@@ -14,6 +14,7 @@ $white: white !default;
 $dark_gray: #333 !default;
 $light_gray: #ddd !default;
 $action_color: #477DCA !default;
+$gainsboro: gainsboro !default;
 
 
 // menu_centered
@@ -50,7 +51,7 @@ $accordion_tabs_tab_inactive_hover_color: darken($light_gray, 5);
 
 
 // cards
-$cards_base_border_color: gainsboro !default;
+$cards_base_border_color: $gainsboro;
 $cards_base_border_radius: 3px !default;
 $cards_base_background_color: $white;
 $cards_base_spacing: 1.5em !default;
@@ -63,6 +64,39 @@ $cards_card_header_background: $cards_card_background;
 $cards_card_margin: 1em;
 $cards_card_image_hover_opacity: 0.7;
 $cards_card_image_hover_color: #F8F2B4;
+
+
+//bullet_points
+$bullet_points_base_line_height: 1.5em !default;
+$bullet_points_base_font_color: $dark-gray !default;
+$bullet_points_icon_bullet_size: 3.5em;
+
+
+//nav_menu
+$nav_menu_base_border_radius: 3px !default;
+$nav_menu_navigation_padding: 1em;
+$nav_menu_navigation_background: $primary;
+$nav_menu_navigation_color: transparentize($secondary, 0.3);
+$nav_menu_navigation_color_hover: $white;
+$nav_menu_navigation_height: 60px;
+$nav_menu_navigation_nav_button_background: $action-color;
+$nav_menu_navigation_nav_button_background_hover: lighten($nav_menu_navigation_background, 10%);
+$nav_menu_navigation_nav_button_border: 1px solid lighten($nav_menu_navigation_nav_button_background, 20%);
+$nav_menu_navigation_search_background: lighten($nav_menu_navigation_background, 5);
+$nav_menu_navigation_search_border: 1px solid darken($nav_menu_navigation_background, 5);
+$nav_menu_navigation_active_link_color: transparentize(white, 0.5);
+$nav_menu_navigation_submenu_padding: 1em;
+$nav_menu_navigation_submenu_width: 12em;
+$nav_menu_horizontal_bar_mode: $large-screen;
+
+
+//side_image
+$side_image_base_line_height: 1.5em !default;
+$side_image_base_font_color: $dark-gray !default;
+$side_image_side_image_background_top: #B5EBEB;
+$side_image_side_image_background_bottom: #5DAC5D;
+$side_image_side_image_content_background: #F9F9F9;
+$side_image_side_image_border: 1px solid darken(transparentize($side_image_side_image_background_bottom, 0.8), 30%);
 
 
 //grid_items
