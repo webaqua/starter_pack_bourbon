@@ -1,6 +1,5 @@
 .footer {
-
-  background: $footer_footer_background;
+  background: $primary;
   padding: ($footer_base_spacing * 2) $gutter;
   width: 100%;
 
@@ -23,7 +22,7 @@
   ul {
     flex-basis: 13em;
     flex-shrink: 0;
-    margin-bottom: $footer_base_spacing * 2;
+    margin-bottom: 0;
     padding: 0;
   }
 
@@ -62,5 +61,15 @@
     margin: auto;
     max-width: 35em;
     text-align: center;
+
+    a {color: $white;}
+  }
+}
+@media screen and (max-width: 600px){
+  .footer {
+    padding: 1em;
+    ul {
+      margin-bottom: 1em;
+    }
   }
 }
