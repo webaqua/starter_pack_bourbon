@@ -1,47 +1,16 @@
-body {
-	background: $primary;
-}
-
-.container {
+#main {
 	@include outer-container;
-	margin: 1em;
-	padding: 1em;
-	background: #fff;
-	@media screen and (min-width: 1400px){margin: 1em auto;}
-}
-.mater {
-	padding: 0 1em;
-	margin-bottom: 2em;
-
-	ul {
-		list-style-type: disc;
-		padding-left: 40px;
-		margin-bottom: 1em;
-	}
-	h1.title {
-	  font-size: 2em;
-	  text-align: center;
-	}
-	h2.subtitle {
-	  font-size: 1.7em;
-	  text-align: center;
-	}
-	table tr td {
-	    padding: 10px;
-	    border: 1px solid #333;
-
-			p {
-				margin-bottom: 0px;
-			}
-	}
+	background-color: lightblue;
 }
 
 section {
 	@include outer-container;
-
+	text-align: center;
+	margin-bottom: 1em;
+	
 	&#top-row {
 		@include span-columns(12);
-
+		
 		#content-1 {
 			@include span-columns(4 of 12); // For nested selectors, pass the number of parent columns as well
 			@include pad();
@@ -53,17 +22,17 @@ section {
 			background-color: grey;
             // background-color: rp-color('primary'); // Base color
 		}
-
+		
 		#content-1, #content-2 {
 			@media screen and (max-width: 768px) {
 				@include span-columns(12 of 12);
 			}
 		}
 	}
-
+	
 	&#middle-row {
 		@include span-columns(12);
-
+		
 		#content-1 {
 			@include span-columns(6 of 12);
 			@include pad();
@@ -72,22 +41,22 @@ section {
 		#content-2 {
 			@include span-columns(6 of 12);
 			@include pad();
-			background-color: hotpink;
+			background-color: hotpink; 
             // background-color: rp-color('purple'); // Base color
             // background-color: rp-color('purple', 'base'); // Nested color
             // background-color: rp-color('purple', $opacity: '50'); // Base color with opacity
 		}
-
+		
 		#content-1, #content-2 {
 			@media screen and (max-width: 768px) {
 				@include span-columns(12 of 12);
 			}
 		}
 	}
-
+	
 	&#bottom-row {
 		@include span-columns(12);
-
+		
 		#content-1 {
 			@include span-columns(8 of 12);
 			@include pad();
@@ -98,40 +67,11 @@ section {
 			@include pad();
 			background-color: seagreen;
 		}
-
+		
 		#content-1, #content-2 {
 			@media screen and (max-width: 768px) {
 				@include span-columns(12 of 12);
 			}
-		}
-	}
-}
-@media screen and (max-width: 900px){
-	.mater {
-		h1.title {
-		  font-size: 1.5em;
-		}
-		h2.subtitle {
-		  font-size: 1.2em;
-		}
-	}
-}
-@media screen and (max-width: 600px){
-	.mater {
-		ul {
-			padding-left: 20px;
-		}
-		h1.title {
-		  font-size: 1.2em;
-		}
-		h2.subtitle {
-		  font-size: 1.1em;
-		}
-		table tr td {
-	    padding: 5px;
-	    border: 1px solid #333;
-	    overflow: auto;
-	    font-size: 12px;
 		}
 	}
 }
