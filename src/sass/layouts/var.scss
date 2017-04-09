@@ -1,0 +1,24 @@
+.clr{
+  clear: both;
+}
+/* Side Image */
+.button-holiday{
+  /* Style for "Прямоуголь" */
+  position: absolute;
+  bottom: 22%;
+  left: 42.5%;
+  width: 282px;
+  height: 50px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.39);
+  border-radius: 25px;
+  background-color: #4f7c27;
+  p{
+    /* Style for "Хочу празд" */
+    color: #f3e936;
+    font-family: $font-family-articles;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

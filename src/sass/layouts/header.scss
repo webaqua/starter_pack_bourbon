@@ -1,0 +1,47 @@
+.contacts-line{
+  @include outer-container;
+  // min-height: 112px;
+  background-color: #1a3521;
+  font-family: "MyriadProRegular";
+  min-height: 112px;
+}
+
+.contacts-icon{
+  @include span-columns(10);
+  @include shift(1);
+  margin-top: calc((112px - 40px) / 1.5);
+  text-align: right;
+  span{
+    font-weight: 600;
+    font-size: 20px;
+    color: #f3e936;
+    padding-left: 30px;
+  }
+  i{
+    font-size: 20px;
+    color: #abc052;
+    padding: 5px 15px;
+    span{
+      font-weight: normal;
+      font-style: italic;
+      padding-left: 5px;
+      line-height: 30px;
+      color: #abc052;
+    }
+  }
+}
+
+.order{
+  /* Style for "Rectangle" */
+  box-shadow: 1px 2px 0 2px rgba(0, 0, 0, 0.18);
+  background-color: #f3e936;
+  float: right;
+  // background-image: linear-gradient(to left, #f2f075 0%, #757903 100%);
+  background: url(../img/rectangle-1.png);
+  font-weight: normal !important;
+  color: #052c10;
+  font-style: italic;
+  line-height: 30px;
+  padding: 0 !important;
+  margin: 0 0 0 30px;
+}

@@ -2,6 +2,11 @@ h1 { // Sample override
 	font-size: 2.5em;
 }
 
+$max-width: 1920px;
+
+$font-family: "MyriadProRegular";
+$font-family-articles: "Adigiana 2";
+
 // screens
 $medium_screen: 40em !default;
 $large_screen: 53.75em !default;
@@ -16,6 +21,8 @@ $light_gray: #ddd !default;
 $action_color: #477DCA !default;
 $gainsboro: gainsboro !default;
 
+/* Header */
+// $header_height: 120px;
 
 // menu_centered
 $menu_centered_background: $primary;
@@ -76,7 +83,7 @@ $bullet_points_icon_bullet_size: 3.5em;
 $nav_menu_base_border_radius: 3px !default;
 $nav_menu_navigation_padding: 1em;
 $nav_menu_navigation_background: $primary;
-$nav_menu_navigation_color: transparentize($secondary, 0.3);
+$nav_menu_navigation_color: #f3e936;
 $nav_menu_navigation_color_hover: $white;
 $nav_menu_navigation_height: 60px;
 $nav_menu_navigation_nav_button_background: $action-color;

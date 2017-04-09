@@ -1,0 +1,24 @@
+.process{
+  @include outer-container;
+  text-align: center;
+  .process-call, .process-dialog, .process-acception, .process-preparation, .process-offer, .process-conducting{
+    @include span-columns(2 of 12, collapse);
+    padding: 5.5vmin 0;
+    i{
+      font-size: 6vmin;
+      color: #f3e936;
+    }
+    p{
+      font-family: $font-family;
+      text-transform: uppercase;
+      color: #fff;
+      margin: 1.5vmin 0;
+    }
+  }
+  .process-call, .process-acception,.process-offer{
+    background: #1a3111;
+  }
+  .process-dialog, .process-preparation,.process-conducting{
+    background: #214c10;
+  }
+}

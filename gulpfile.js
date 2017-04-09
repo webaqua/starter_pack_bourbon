@@ -22,7 +22,13 @@ gulp.task('sass', function () {
   return gulp.src('./src/sass/*.{scss,sass}')
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass(
+      {
+        includePaths: [
+          './bower_components/foundation-sites/scss'
+        ]
+      }
+    ).on('error', sass.logError))
     .pipe(plumber())
     .pipe(autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
@@ -30,7 +36,7 @@ gulp.task('sass', function () {
     .pipe(concat('main.css'))
     .pipe(sourcemaps.write('.'))
   	.pipe(rename({suffix: '.min', prefix : ''}))
-    .pipe(minifycss())
+    .pipe(minifycss({processImport: false}))
     .pipe(gulp.dest('./src/app/css'));
 });
 

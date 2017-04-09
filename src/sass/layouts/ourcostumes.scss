@@ -1,0 +1,46 @@
+.ourcostumes{
+  @include outer-container;
+  background: #f6f2b2;
+  @include span-columns(12);
+  .ourcostumes-text, .ourcostumes-image{
+    @include span-columns(6);
+    text-align: center;
+    p{
+      @include span-columns(6);
+      @include shift(3);
+    }
+  }
+  .ourcostumes-image{
+    .slider{
+      padding: 0;
+    }
+    .slider-nav
+    {
+      bottom: 3vmin;
+    }
+  }
+  .ourcostumes-text{
+    padding: 28vmin 0 4.5vmin 0;
+    input{
+      width: 30%;
+      margin: 0 auto;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.39);
+      border-radius: 20px;
+      background-color: #4f7c27;
+      color: #f3e936;
+      font-family: "Adigiana 2";
+      text-transform: uppercase;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 25vmin;
+    }
+  }
+  h1{
+    text-align: center;
+    color: #204611;
+    font-family: $font-family-articles;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}

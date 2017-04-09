@@ -9,6 +9,10 @@ header.navigation {
     @include clearfix;
     position: relative;
     z-index: 9999;
+    background-color: #1a4d20;
+    font-family: $font-family-articles;
+    font-size: 20px;
+    color: #f3e936;
   }
 
   .logo {
@@ -18,7 +22,7 @@ header.navigation {
     padding-right: 2em;
 
     img {
-      max-height: $nav_menu_navigation_height;
+      min-height: $nav_menu_navigation_height;
       padding: 0.8em 0;
     }
   }
@@ -53,6 +57,10 @@ header.navigation {
     float: none;
     min-height: $nav_menu_navigation_height;
     z-index: 9999999;
+    @include outer-container;
+    @include span-columns(10);
+    @include shift(1);
+    text-align: right;
 
     @include media ($nav_menu_horizontal_bar_mode) {
       float: left;
@@ -104,6 +112,7 @@ header.navigation {
       color: $nav_menu_navigation_color;
       display: inline-block;
       text-decoration: none;
+      text-transform: uppercase;
 
       @include media ($nav_menu_horizontal_bar_mode) {
         padding-right: 1em;
