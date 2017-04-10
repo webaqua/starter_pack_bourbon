@@ -1,0 +1,104 @@
+.about{
+  @include span-columns(9);
+  padding: 13.5vmin 0 7vmin 0;
+  @include shift(1.5);
+  text-align: center;
+  text-transform: uppercase;
+  h1{
+    font-family: $font-family;
+    font-weight: 600;
+    color: #1f4411;
+  }
+  p{
+    font-family: $font-family;
+    color: #1f4111;
+    font-size: 18px;
+    text-transform: none;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 35px;
+  }
+
+  /* Статьи */
+  .articles{
+    h1{
+      text-align: left;
+    }
+    .hr-text-before{
+      text-align: left;
+      font-size: 30px;
+      &:before {
+        content: '';
+        // use the linear-gradient for the fading effect
+        // use a solid background color for a solid bar
+        background-color: #b2b0ac;
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        width: 90%;
+        height: 1px;
+      }
+    }
+    .hr-text-after{
+      text-align: right;
+      font-size: 18px;
+      &:before {
+        content: '';
+        // use the linear-gradient for the fading effect
+        // use a solid background color for a solid bar
+        background-color: #b2b0ac;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 87%;
+        height: 1px;
+      }
+    }
+    .hr-text-before, .hr-text-after {
+      line-height: 1em;
+      position: relative;
+      outline: 0;
+      border: 0;
+      font-weight: 600;
+      font-family: $font-family;
+      height: 1.5em;
+      &:after {
+        content: attr(data-content);
+        position: relative;
+        display: inline-block;
+        color: #1f4411;
+        line-height: 1.5em;
+        // this is really the only tricky part, you need to specify the background color of the container element...
+        // color: #818078;
+        padding: 0 .5em 0 0;
+      }
+    }
+  }
+}
+
+.articles-content-text{
+  text-align: left;
+  width: 100%;
+  h3{
+    text-transform: uppercase;
+    font-family: $font-family;
+  }
+  p{
+    text-transform: none;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 36px;
+  }
+}
+
+.articles-content-first, .articles-content-second, .articles-content-third, .articles-content-fourth, {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  .articles-content-image{
+    margin-right: 20px;
+  }
+}
