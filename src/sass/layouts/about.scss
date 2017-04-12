@@ -24,56 +24,45 @@
     h1{
       text-align: left;
     }
-    .hr-text-before{
-      text-align: left;
-      font-size: 30px;
-      &:before {
-        content: '';
-        // use the linear-gradient for the fading effect
-        // use a solid background color for a solid bar
-        background-color: #b2b0ac;
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        width: 90%;
-        height: 1px;
+    .articles-line-after{
+      hr{
+        @include span-columns(10, collapse);
+        color: #b2b0ac;
+        margin: .8em 0;
       }
-    }
-    .hr-text-after{
-      text-align: right;
-      font-size: 18px;
-      &:before {
-        content: '';
-        // use the linear-gradient for the fading effect
-        // use a solid background color for a solid bar
-        background-color: #b2b0ac;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        width: 87%;
-        height: 1px;
-      }
-    }
-    .hr-text-before, .hr-text-after {
-      line-height: 1em;
-      position: relative;
-      outline: 0;
-      border: 0;
-      font-weight: 600;
-      font-family: $font-family;
-      height: 1.5em;
-      &:after {
-        content: attr(data-content);
-        position: relative;
-        display: inline-block;
+      span{
+        @include span-columns(2);
         color: #1f4411;
-        line-height: 1.5em;
-        // this is really the only tricky part, you need to specify the background color of the container element...
-        // color: #818078;
-        padding: 0 .5em 0 0;
+        font-family: $font-family;
+        font-size: $font-size-p;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+    .articles-line-before{
+      margin-bottom: 30px;
+      hr{
+        @include span-columns(10, collapse);
+        color: #b2b0ac;
+        margin: 1.2em 0;
+      }
+      span{
+        @include span-columns(2, collapse);
+        color: #1f4411;
+        font-family: $font-family;
+        font-size: $font-size-h1;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: left;
       }
     }
   }
+}
+
+.articles-line-before::after{
+  content: '';
+  width: 100%;
+  display: table;
 }
 
 .articles-content-text{

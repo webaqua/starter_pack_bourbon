@@ -2,6 +2,10 @@
   @include outer-container;
   background: #f6f2b2;
   @include span-columns(12);
+  display: -webkit-flex; /* Safari */
+  -webkit-align-items: center; /* Safari 7.0+ */
+  display: flex;
+  align-items: center;
   .ourcostumes-text, .ourcostumes-image{
     @include span-columns(6);
     text-align: center;
@@ -20,9 +24,9 @@
     }
   }
   .ourcostumes-text{
-    padding: 28vmin 0 4.5vmin 0;
     input{
       width: 30%;
+      min-width: 280px;
       margin: 0 auto;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.39);
       border-radius: 20px;

@@ -1,0 +1,43 @@
+.costumes-wrapper{
+  position: relative;
+}
+.costumes-wrapper:after{
+  content: '';
+  width: 100%;
+  display: table;
+}
+
+.costumes-wrapper-back{
+  width: 100%;
+  z-index: 1;
+  height: 40%;
+  position: absolute;
+  background-size: contain;
+  opacity: 0.43;
+  background: url(../img/about/aboutimage.jpg);
+}
+
+.costumes-wrap{
+  @include span-columns(10);
+  @include shift(1);
+  padding: 30px 60px;
+  position: relative;
+  z-index: 2;
+  margin-top: 9.72vw;
+  margin-bottom: 9.72vw;
+  background-color: #fff;
+  h1{
+    font-family: $font-family-articles;
+    font-size: $font-size-h1;
+    text-transform: uppercase;
+    color: #1a4d20;
+  }
+  p{
+    font-family: $font-family;
+    font-size: $font-size-p;
+    font-weight: bold;
+    color: #303028;
+    color: #1a4d20;
+    line-height: 25px;
+  }
+}

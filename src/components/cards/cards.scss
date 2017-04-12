@@ -5,7 +5,6 @@
 }
 
 .card {
-
   background-color: $cards_card_background;
   border: $cards_card_border;
   border-radius: $cards_base-border-radius;
@@ -13,14 +12,24 @@
   cursor: pointer;
   flex-basis: 15em;
   flex-grow: 1;
-  margin: 0 $cards_card_margin $cards_base_spacing $cards_card_margin;
+  margin: 0 1em 1.5em 0;
   position: relative;
   transition: all 0.2s ease-in-out;
-
+  input{
+    width: 100%;
+    background-color: #197b30;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.39);
+    color: #fff;
+    font-family: $font-family;
+    font-size: $font-size-p;
+    line-height: 45px;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    visibility: hidden;
+  }
   .card-image {
-    background-color: $cards_card_image_hover_color;
-    height: 150px;
-    max-height: 150px;
+    background-color: #000;
     overflow: hidden;
 
     img {
@@ -28,17 +37,26 @@
       opacity: 1;
       transition: all 0.2s ease-in-out;
       width: 100%;
+      max-width: 470px;
+      max-height: 300px;
     }
   }
 
   .card-header {
-    background-color: $cards_card_header_background;
-    border-bottom: $cards_card_border;
+    // background-color: $cards_card_header_background;
+    // border-bottom: $cards_card_border;
     border-radius: $cards_base-border-radius $cards_base-border-radius 0 0;
     font-weight: bold;
     line-height: 1.5em;
     padding: ($cards_base_spacing / 3) ($cards_base_spacing / 2);
     transition: all 0.2s ease-in-out;
+    h3{
+      font-family: $font-family-articles;
+      font-size: $font-size-h1;
+      font-weight: bold;
+      color: #235210;
+      text-align: center;
+    }
   }
 
   .card-copy {
@@ -48,13 +66,17 @@
 
     p {
       margin: 0 0 ($cards_base_spacing / 2);
+      text-align: center;
     }
   }
 
   &:focus,
   &:hover {
     cursor: pointer;
-
+    input{
+      visibility: visible;
+      cursor: pointer;
+    }
     img {
       opacity: $cards_card_image_hover_opacity;
     }

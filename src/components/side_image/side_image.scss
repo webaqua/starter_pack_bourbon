@@ -16,7 +16,7 @@
 
     @include media($large-screen) {
       @include span-columns(4);
-      background-position: bottom;
+      background-position: middle;
       background-size: cover;
     }
   }
@@ -27,14 +27,14 @@
 
     @include media($large-screen) {
       @include span-columns(8);
-      padding: 4em 4em 8em 4em;
+      padding: 4em 4em;
     }
 
     h1 {
       text-shadow: 5px 6px 0 rgba(0, 0, 0, 0.18);
       color: #f3e936;
       font-family: $font-family-articles;
-      font-size: 103px;
+      font-size: 5.36vw;
       font-weight: 400;
       text-transform: uppercase;
     }
@@ -43,7 +43,7 @@
       text-shadow: 5px 6px 0 rgba(0, 0, 0, 0.18);
       color: #f3e936;
       font-family: $font-family-articles;
-      font-size: 55px;
+      font-size: 2.86vw;
       font-weight: 400;
       text-transform: uppercase;
       margin: 0 !important;

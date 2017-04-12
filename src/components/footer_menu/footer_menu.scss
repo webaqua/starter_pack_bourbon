@@ -1,5 +1,5 @@
 .footer-2 {
-
+  padding: 1em 0 0 0!important;;
   background: $footer_menu_footer_background;
   display: inline-block;
   padding: $footer_menu_base_spacing;
@@ -18,17 +18,25 @@
   .footer-logo img {
     height: 1.6em;
   }
+  .whp{
+    float: right;
+    span{
+      font-size: 20px;
+      font-style: italic;
+      color: #fff;
+    }
+  }
 
   ul {
     line-height: 1.5em;
     margin: 0 0 1em 0;
     padding: 0;
 
+
     @include media($footer_menu_large_screen) {
       float: left;
       line-height: 1.8em;
       margin-bottom: 0;
-      margin-left: 1em;
     }
   }
 
@@ -43,9 +51,9 @@
   }
 
   ul li a {
-    color: $footer_menu_footer_link_color;
+    color: #f3e936 !important;
     text-decoration: none;
-
+    font-style: italic;
     &:focus,
     &:hover {
       color: transparentize($footer_menu_footer_color, 0);

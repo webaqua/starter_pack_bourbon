@@ -21,6 +21,10 @@
   }
 }
 
+.grid-items-lines:after{
+  clear: none !important;
+}
+
 .grid-items-lines {
   $base-background-color: white !default;
   $dark-gray: #333 !default;

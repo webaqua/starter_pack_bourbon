@@ -27,15 +27,43 @@ footer{
   .bottom-contacts-line-back{
     background-color: #1a3521;
     .bottom-contacts-line{
-      padding: 15px 0 0 0;
       @include span-columns(10);
       @include shift(1);
-      .bottom-contacts-line-text{
-        color: #fcfcfb;
-        font-family: Arial;
-        font-size: 18px;
-        font-weight: 400;
-        font-style: italic;
+      position: relative;
+      img{
+        position: absolute;
+      }
+      .bottom-contacts-line-content{
+        @include span-columns(12, collapse);
+        padding: 20px 0 0 0;
+        .bottom-contacts-line-text{
+          @include span-columns(8 of 12);
+          p{
+            color: #fcfcfb;
+            font-family: Arial;
+            font-size: 18px;
+            font-weight: 400;
+            font-style: italic;
+          }
+        }
+        .bottom-contacts-line-phones{
+          @include span-columns(4 of 12);
+          p{
+            color: #f3e936;
+            font-family: Arial;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: right;
+
+            i{
+              margin-right: 20px;
+              font-size: 22px;
+            }
+            span{
+              // float: right;
+            }
+          }
+        }
       }
     }
   }

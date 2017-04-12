@@ -5,10 +5,10 @@
 .button-holiday{
   /* Style for "Прямоуголь" */
   position: absolute;
-  bottom: 22%;
+  bottom: 5%;
   left: 42.5%;
-  width: 282px;
-  height: 50px;
+  width: 14.58vw;
+  height: 2.6vw;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.39);
   border-radius: 25px;
   background-color: #4f7c27;
@@ -16,9 +16,15 @@
     /* Style for "Хочу празд" */
     color: #f3e936;
     font-family: $font-family-articles;
-    font-size: 30px;
+    font-size: $font-size-h1;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
   }
+}
+
+.additionalservices::after{
+  content: '';
+  width: 100%;
+  display: table;
 }

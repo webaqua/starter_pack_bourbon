@@ -1,26 +1,49 @@
+.header{
+  position: relative;
+  a.logo {
+    float: left;
+    margin-left: 8.51064%;
+    position: absolute;
+    z-index: 999999;
+    bottom: 0;
+    img {
+      min-height: $nav_menu_navigation_height;
+    }
+  }
+}
+
+.header::after{
+  content: '';
+  width: 100%;
+  display: table;
+}
+
 .contacts-line{
   @include outer-container;
   // min-height: 112px;
   background-color: #1a3521;
   font-family: "MyriadProRegular";
-  min-height: 112px;
+  height: 5.83vw;
+  display: -webkit-flex; /* Safari */
+  -webkit-align-items: center; /* Safari 7.0+ */
+  display: flex;
+  align-items: center;
 }
 
 .contacts-icon{
   @include span-columns(10);
   @include shift(1);
-  margin-top: calc((112px - 40px) / 1.5);
   text-align: right;
   span{
     font-weight: 600;
-    font-size: 20px;
+    font-size: $font-size-p;
     color: #f3e936;
     padding-left: 30px;
   }
   i{
     font-size: 20px;
     color: #abc052;
-    padding: 5px 15px;
+    padding: 0 15px;
     span{
       font-weight: normal;
       font-style: italic;
@@ -33,15 +56,20 @@
 
 .order{
   /* Style for "Rectangle" */
-  box-shadow: 1px 2px 0 2px rgba(0, 0, 0, 0.18);
   background-color: #f3e936;
   float: right;
-  // background-image: linear-gradient(to left, #f2f075 0%, #757903 100%);
   background: url(../img/rectangle-1.png);
   font-weight: normal !important;
-  color: #052c10;
   font-style: italic;
-  line-height: 30px;
+  line-height: 1.7vw;
+  white-space: nowrap;
   padding: 0 !important;
   margin: 0 0 0 30px;
+  width: 9.95vw;
+  span{
+    color: #052c10;
+    font-size: $font-size-p;
+    padding: 0 10px;
+    text-transform: uppercase;
+  }
 }

@@ -9,18 +9,32 @@
 
 .ask-question-front{
   padding: 9vmin 0;
-  background-color: #1a3111;
+  z-index: 11;
+  position: relative;
   color: #fff;
 }
 
 .ask-question-back{
   position: absolute;
-  background: url('../img/ask-question-back.jpg') no-repeat;
-  background-size: cover;
-  opacity: .3;
+  z-index: -3;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+.ask-question-back-image{
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 1;
+  z-index: -1;
+  background-color: #1a3111;
+  img{
+    opacity: .4;
+  }
 }
 
 .ask-question-content{
@@ -52,6 +66,7 @@
     textarea{
       height: 20vmin;
       border-radius: 5px;
+      resize: none;
       padding: .5em 1.5em;
       text-transform: uppercase;
     }
@@ -66,7 +81,7 @@
     p{
       text-align: left;
       font-style: italic;
-      font-size: 15px;
+      font-size: .74vw;
     }
   }
   .confidentiality-input{

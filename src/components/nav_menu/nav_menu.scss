@@ -1,6 +1,5 @@
 header.navigation {
   background-color: $nav_menu_navigation_background;
-  border-bottom: 1px solid darken($nav_menu_navigation_background, 10);
   min-height: $nav_menu_navigation_height;
   width: 100%;
   z-index: 999;
@@ -14,19 +13,6 @@ header.navigation {
     font-size: 20px;
     color: #f3e936;
   }
-
-  .logo {
-    float: left;
-    max-height: $nav_menu_navigation_height;
-    padding-left: $nav_menu_navigation_padding;
-    padding-right: 2em;
-
-    img {
-      min-height: $nav_menu_navigation_height;
-      padding: 0.8em 0;
-    }
-  }
-
 
 // Mobile view
 
@@ -125,10 +111,6 @@ header.navigation {
     }
   }
 
-  .active-nav-item a {
-    border-bottom: 1px solid $nav_menu_navigation_active_link_color;
-    padding-bottom: 3px;
-  }
 
 
 // Sub menus
@@ -338,4 +320,10 @@ header.navigation {
       }
     }
   }
+}
+header.navigation ul li:last-child{
+  padding-right: 0;
+}
+header.navigation ul li:last-child a{
+  padding-right: 0;
 }
