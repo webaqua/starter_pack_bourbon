@@ -6,6 +6,7 @@
     position: absolute;
     z-index: 999999;
     bottom: 0;
+    width: 10%;
     img {
       min-height: $nav_menu_navigation_height;
     }
@@ -29,7 +30,13 @@
   display: flex;
   align-items: center;
 }
-
+i.fa.fa-phone {
+  color: #f3e936;
+  span {
+    color: #f3e936;
+    font-style: normal;
+  }
+}
 .contacts-icon{
   @include span-columns(10);
   @include shift(1);
@@ -38,7 +45,7 @@
     font-weight: 600;
     font-size: $font-size-p;
     color: #f3e936;
-    padding-left: 30px;
+    padding-left: 25px;
   }
   i{
     font-size: 20px;
@@ -56,20 +63,26 @@
 
 .order{
   /* Style for "Rectangle" */
-  background-color: #f3e936;
+  background: #4f7c27;
   float: right;
-  background: url(../img/rectangle-1.png);
-  font-weight: normal !important;
-  font-style: italic;
-  line-height: 1.7vw;
-  white-space: nowrap;
-  padding: 0 !important;
-  margin: 0 0 0 30px;
-  width: 9.95vw;
+  margin: 0px 10px 15px;
+  width: 14.58vw;
+  height: 2.6vw;
+  max-height: 36px;
+  max-width: 194px;
+  line-height: 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,.39);
+  border-radius: 20px;
+  display: -webkit-flex; /* Safari */
+  -webkit-align-items: center; /* Safari 7.0+ */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
   span{
-    color: #052c10;
-    font-size: $font-size-p;
-    padding: 0 10px;
-    text-transform: uppercase;
+    font-style: normal;
+    margin: 0 auto;
+    padding-left: 0;
+    font-family: $font-family-articles;
+    font-weight: normal;
   }
 }

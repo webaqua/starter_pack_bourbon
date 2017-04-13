@@ -1,4 +1,10 @@
 $(document).ready(function(){
+  if ($(window).width() < 768) {
+    $('.grid-item-services-last').insertBefore('.grid-item-services-first');
+    $('.grid-item-addservices-last').insertBefore('.grid-item-addservices-first');
+    // $('.side-last').append($('.side-first'));
+  }
+
   $(window).resize(function() {
     var more = document.getElementById("js-navigation-more");
     if ($(more).length > 0) {

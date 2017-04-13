@@ -2,22 +2,38 @@
   clear: both;
 }
 /* Side Image */
+.button-holiday:hover{
+  p{
+    color: #fff;
+  }
+}
 .button-holiday{
   /* Style for "Прямоуголь" */
+  width: 14.58vw;
+  height: 2.6vw;
+  background: #4f7c27;
+  float: left;
+  max-height: 50px;
+  max-width: 282px;
+  line-height: 0;
+  border-radius: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
   position: absolute;
   bottom: 5%;
   left: 42.5%;
-  width: 14.58vw;
-  height: 2.6vw;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.39);
   border-radius: 25px;
-  background-color: #4f7c27;
   p{
     /* Style for "Хочу празд" */
     color: #f3e936;
     font-family: $font-family-articles;
     font-size: $font-size-h1;
     font-weight: 400;
+    margin: 0 auto;
     text-transform: uppercase;
     text-align: center;
   }

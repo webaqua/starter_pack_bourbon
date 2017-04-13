@@ -4,6 +4,7 @@
   .process-call, .process-dialog, .process-acception, .process-preparation, .process-offer, .process-conducting{
     @include span-columns(2 of 12, collapse);
     padding: 5.5vmin 0;
+    cursor: pointer;
     i{
       font-size: 6vmin;
       color: #f3e936;

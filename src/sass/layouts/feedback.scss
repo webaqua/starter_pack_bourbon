@@ -1,4 +1,10 @@
+.feedback:after{
+  content: '';
+  width: 100%;
+  display: table;
+}
 .feedback{
+  overflow: hidden;
   background: #ebebeb;
   padding: 11vmin 0;
   .container {
@@ -6,6 +12,7 @@
     max-width: 960px;
     margin: 0 auto;
   }
+
   .carousel {
       max-width: 100%;
       position: relative;
@@ -76,7 +83,7 @@
 
   .left-btn, .right-btn {
       display: inline-block;
-      width: 50px;
+      width: 35px;
       height: 60px;
       padding: 5px;
       text-align: center;

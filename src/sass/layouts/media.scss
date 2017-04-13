@@ -1,0 +1,234 @@
+
+@media screen and (max-width: 1366px) {}
+@media screen and (max-width: 992px) {}
+@media screen and (max-width: 768px) {
+  /* Header */
+  .header a.logo {
+    margin-left: 10px;
+    z-index: 999999;
+    width: 40%;
+    top: 0;
+  }
+  header.navigation nav{
+    width: 95% !important;
+    margin: 0 2.5% !important;
+  }
+  header.navigation ul li.nav-link a{
+    font-size: 4vw !important;
+  }
+  header.navigation ul li.nav-link{
+    line-height: 40px !important;
+  }
+  header.navigation ul li:last-child a{
+    padding-right: .8em;
+  }
+  header.navigation ul.navigation-menu{
+    margin: 0 0 30px 0 !important;
+  }
+  header.navigation ul li.nav-link {
+    background: #296927 !important;
+  }
+  .fa {
+    display: block !important;
+  }
+  .fa.fa-phone{
+    cursor: pointer;
+  }
+  .contacts-line{
+    height: auto;
+    .contacts-icon{
+      width: 100%;
+      margin: 0;
+      .order{
+        width: 95%;
+        margin: 5px 10px 15px;
+        span{
+          font-size: 4vw;
+          margin: 0 auto;
+          padding-left: 0;
+        }
+      }
+      i{
+        span{
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+  /* end Header */
+
+  /* Costumes */
+  .ourcostumes{
+    display: block;
+    .ourcostumes-text{
+      width: 100%;
+      margin-bottom: 10px;
+      p{
+        width: 100%;
+        padding: 15px 5px;
+        margin: 0;
+        text-align: justify;
+      }
+    }
+    .ourcostumes-image{
+      width: 100%;
+    }
+  }
+  /* end Costumes */
+
+  /* Service */
+  .grid-items-lines .grid-item{
+    height: 20vh;
+  }
+  .grid-item-big{
+    height: auto !important;
+    padding: 15px 5px !important;
+    display: block !important;
+    &:after{
+      content: '';
+      width: 100%;
+      display: table;
+    }
+  }
+  .services-content-text{
+    text-align: center;
+    p{
+      max-width: 100% !important;
+      text-align: justify;
+    }
+    input{
+      float: none !important;
+    }
+  }
+  .process{
+    div{
+      width: 100% !important;
+      p{
+        font-size: 1.94vw !important;
+      }
+    }
+  }
+  .frozen{
+    display: none !important;
+  }
+  /* end Service */
+
+  /* Carousel */
+  .feedback .carousel li .carousel-text{
+    margin: 50px 0 0 0;
+  }
+  .carousel-text p{
+    text-align: justify !important;
+    padding: 5px 15px;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  .feedback .right{
+    transform: translateX(35%) scale(.7);
+  }
+  .feedback .left{
+    transform: translateX(-35%) scale(.7);
+  }
+
+  /* end Carousel */
+
+  /* Ask-Questions */
+  .ask-question-content{
+    width: 95%;
+    margin: 0 auto;
+    float: none;
+    .input-records{
+      width: 100% !important;
+    }
+    .textarea-records{
+      width: 100% !important;
+    }
+    input{
+      height: 40px !important;
+    }
+  }
+  .confidentiality{
+    text-align: center;
+    width: 95%;
+    margin: 0 auto !important;
+    float: none;
+    .confidentiality-text{
+      width: 100% !important;
+      p{
+        text-align: center;
+        font-size: 2vw;
+      }
+    }
+    .confidentiality-input{
+      width: 100% !important;
+      input{
+        float: none;
+      }
+    }
+  }
+  /* end Ask-Questions */
+
+  /* About */
+  .about{
+    margin: 0 auto;
+    width: 95%;
+    text-align: justify;
+    float: none;
+  }
+
+  /* end About */
+
+  /* Articles */
+  .articles{
+    div{
+      display: block;
+      text-align: center;
+    }
+  }
+  .about .articles .articles-line-after hr{
+    width: 100%
+  }
+  .about .articles .articles-line-after span{
+    width: 100%;
+    font-size: 4vw;
+    text-align: center;
+  }
+  .about .articles .articles-line-before hr{
+    width: 100% !important;
+  }
+  .about .articles .articles-line-before span{
+    width: 100%;
+    font-size: 8vw;
+    text-align: center;
+  }
+  /* end Articles */
+
+  /* Footer */
+  .footer-2{
+    text-align: center;
+    ul li{
+      display: inline-block;
+    }
+  }
+  .bottom-contacts-line-text, .bottom-contacts-line-phones{
+    width: 100% !important;
+    text-align: center;
+  }
+  .bottom-contacts-line-phones{
+    p{
+      text-align: center !important;
+      i{
+        display: inline-block !important;
+      }
+    }
+  }
+  .bottom-contacts-line{
+    img{
+      display: none;
+    }
+  }
+  /* end Footer */
+}
+
+@media screen and (max-width: 480px) {}
+@media screen and (max-width: 320px) {}
