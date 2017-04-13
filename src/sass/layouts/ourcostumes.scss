@@ -12,6 +12,7 @@
     p{
       @include span-columns(6);
       @include shift(3);
+      line-height: 30px;
     }
   }
   .ourcostumes-image{
@@ -36,7 +37,7 @@
       text-transform: uppercase;
       text-align: center;
       padding: 15px 0;
-      margin-top: 25vmin;
+      margin-top: 10vmin;
     }
   }
   h1{

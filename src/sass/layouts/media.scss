@@ -41,7 +41,10 @@
       margin: 0;
       .order{
         width: 95%;
+        max-width: none;
+        max-height: none;
         margin: 5px 10px 15px;
+        height: 10vw;
         span{
           font-size: 4vw;
           margin: 0 auto;
@@ -63,6 +66,7 @@
     .ourcostumes-text{
       width: 100%;
       margin-bottom: 10px;
+      padding: 15px 5px;
       p{
         width: 100%;
         padding: 15px 5px;
@@ -142,6 +146,9 @@
     }
     .textarea-records{
       width: 100% !important;
+      textarea{
+        height: 50vmin;
+      }
     }
     input{
       height: 40px !important;
@@ -228,6 +235,88 @@
     }
   }
   /* end Footer */
+
+  /* Pages */
+
+  /* About */
+  .about-wrap{
+    width: 95%;
+    margin: 9.72vw 2.5% 0;
+    padding: 30px;
+    h1{
+      text-align: center;
+    }
+    p{
+      font-size: 4vw;
+      line-height: 20px;
+      text-align: justify;
+    }
+    .sidebar{
+      width: 100%;
+      .sidebar-articles{
+        h1{
+          font-size: 4vw;
+        }
+      }
+      .sidebar-sub-articles{
+        h1{
+          font-size: 4vw;
+        }
+      }
+      .sidebar-articles-content{
+        margin: 0 0 10px;
+        .first{
+          h1,p{
+            font-size: 4vw;
+            text-align: left;
+          }
+        }
+      }
+    }
+    .about-wrap-content{
+      width: 100%;
+    }
+  }
+  /* end About */
+
+  /* Costumes */
+  .costumes-wrap{
+    width: 95%;
+    margin: 9.72vw 2.5% 0;
+    padding: 30px;
+    h1{
+      font-size: 8vw;
+      text-align: center;
+    }
+    p{
+      font-size: 4vw;
+      text-align: justify;
+    }
+  }
+  .card-header{
+    h3{
+      font-size: 6vw !important;
+    }
+  }
+  .card{
+    margin: .5em 0 !important;
+    input{
+      font-size: 4vw !important;
+      line-height: 20px !important;
+      visibility: visible !important;
+      &:hover{
+        background-color: #1e9039;
+      }
+    }
+    .card-copy{
+      p{
+        text-align: justify;
+      }
+    }
+  }
+  /* end Costumes */
+
+  /* end Pages */
 }
 
 @media screen and (max-width: 480px) {}
